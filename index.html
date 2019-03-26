@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sports Highlights</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Sports Highlights</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
 
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+  <body>
+    <div class="container">
+      <div class="row">
+        <section id="team-information-form" class="col-md-9">
+          <h1>Team information Form</h1>
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Team Name</label>
+              <input type="text" class="form-control" id="TeamName" />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Team LOGO</label>
+              <input type="text" class="form-control" id="logo" />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Manager</label>
+              <input type="text" class="form-control" id="manager" />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Owner</label>
+              <input type="text" class="form-control" id="owner" />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Arena</label>
+              <input type="text" class="form-control" id="arena" />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Location</label>
+              <input type="text" class="form-control" id="location" />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Players</label>
+              <textarea class="form-control" id="players" rows="3"></textarea>
+            </div>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-</head>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Team Discription</label>
+              <textarea
+                class="form-control"
+                id="discription"
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="Team-submit">
+              Submit
+            </button>
+          </form>
+        </section>
+      </div>
+      <div class="row">
+        <br /><br />
+        <section id="videoPlayer"></section>
+      </div>
+    </div>
 
-<body>
-  <div class="container">
-
-    <section id="team-information-form" class="col-md-9">
-      <h1>Team information Form</h1>
-      <form>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Team Name</label>
-          <input type="text" class="form-control" id="TeamName" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Team LOGO</label>
-          <input type="text" class="form-control" id="logo" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Manager</label>
-          <input type="text" class="form-control" id="manager" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Owner</label>
-          <input type="text" class="form-control" id="owner" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Arena</label>
-          <input type="text" class="form-control" id="arena" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Location</label>
-          <input type="text" class="form-control" id="location" />
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Players</label>
-          <textarea class="form-control" id="players" rows="3"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="exampleFormControlTextarea1">Team Discription</label>
-          <textarea class="form-control" id="discription" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" id="Team-submit">
-          Submit
-        </button>
-      </form>
-    </section>
-
-    <section id="videoPlayer">
-    </section>
-
-  </div>
-
-  <script type="text/javascript" src="./scripts/firebase_form.js"></script>
-  <script src="./scripts/apis.js"></script>
-</body>
-
+    <script type="text/javascript" src="./scripts/firebase_form.js"></script>
+    <script src="./scripts/apis.js"></script>
+  </body>
 </html>

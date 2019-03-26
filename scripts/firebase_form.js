@@ -13,6 +13,7 @@ $(document).ready(function(event) {
   $("#Team-submit").on("click", function(event) {
     console.log("clicked");
     event.preventDefault();
+
     var teamname = $("#TeamName")
       .val()
       .trim();
@@ -48,5 +49,13 @@ $(document).ready(function(event) {
       Players: players,
       Discription: discription
     });
+    $("#TeamName").val("");
+    $("#logo").val("");
+    $("#manager").val("");
+    $("#owner").val("");
+    $("#arena").val("");
+    $("#location").val("");
+    $("#players").val("");
+    $("#discription").val("");
   });
 });
