@@ -11,11 +11,11 @@ $.getJSON("https://www.scorebat.com/video-api/v1/")
 var MU = ["DSSUOcuUego", "Yx6FjkWQBBg", "85ARmG9-Qy8", "bJ9GNgptqiU", "PkifATkmsjE", "DwtWQpnD45s", "Wy6CTxf-fwU", "Z6m56OJ2ur8", "iHtwMf83iJg", "xusN-fRlUVM"];
 var MC = ["eBZItu85G80", "YTUE6B-Qnw8", "Ezm_U-qOKvo", "njuZJPwu7n0", "LjNHmhf-eP0"];
 var LP = ["FQ6BeNdC_oQ", "6n1Xo2yCxIw", "zu1zOKahojQ", "DgeH3YWC2nA", "OysleprofiI"];
-var AR = [""];
-var BR = [];
-var RM = [];
-var JV = ["cLfSpFg6Pxg"];
-var BY = ["ug2FZQQXO9M", "qqFxE14rGgM"];
+var AR = ["p0AsbNFwk7c", "WMCwJ1EztGc", "YxMEDhSJVZQ", "hJAj7wqcHqw"];
+var BR = ["7usNaYC5mXA", "GTE0jJLvBwY", "egp4dyqP1Kc", "vd11FDcG7iI"];
+var RM = ["vQzfEcOuuQM", "Tai2bv5CB0w", "XQjHGPt8C-g", "RelhCGm6hjE", "ymTWEwgjWh8"];
+var JV = ["cLfSpFg6Pxg", "PuFyOHkTrug", "_sxyXSj0jaI", "Dixu0lYfMkQ", "rzUJvN7YRi4"];
+var BY = ["ug2FZQQXO9M", "qqFxE14rGgM", "rhySsu_xOTs", "lDWgTW87W5I", "a5kriXjYnmI"];
 
 //have to make multiple blocks of this code for each team array
 var randomVid = BY[Math.floor((Math.random() * MU.length) + 1)];
