@@ -190,6 +190,49 @@ input[type=submit] {
     margin-top: 0;
   }
 }
+
+  
+#heading {
+  font-family: Times;
+  font-weight: bold;
+}
+
+#subHeading {
+  font-family: Times;
+  font-style: italic;
+}
+
+.panel-title {
+  font-weight: bold;
+}
+
+th {
+  font-weight: bold;
+}
+
+.team-image {
+  display: inline-flex;
+  justify-items: center;
+}
+
+.Description {
+  color: white;
+  background-color: #3E444C;
+  font-family: Times;
+  font-weight: bold;
+  
+}
+
+.jumbotron {
+  background-image: url(http://2.bp.blogspot.com/-PTGfoujiAeU/UPml2luBlpI/AAAAAAAADsI/H7I60USFMVQ/s1600/Manchester-United-Facebook-Cover001.jpg);
+  background-size: 100%;
+  color: black;
+}
+
+#Home {
+  background-image: linear-gradient(red,black)
+
+}
 /* .Footer {
   display: flex;
   position: fixed;
