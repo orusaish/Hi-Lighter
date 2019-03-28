@@ -23,14 +23,13 @@ ul,
 .logo {
   display: inline-block;
   box-sizing: border-box;
-  
 }
 .logo {
   background-color: #c8181f;
   border-right: 0.5em solid #9b1318;
   border-left: 0.5em solid #9b1318;
   -webkit-transform: skew(-15deg);
-          transform: skew(-15deg);
+  transform: skew(-15deg);
   padding: 0 2em;
   height: 100%;
   position: absolute;
@@ -39,7 +38,7 @@ ul,
 }
 .logo .text {
   -webkit-transform: skew(15deg);
-          transform: skew(15deg);
+  transform: skew(15deg);
   display: inline-block;
 }
 nav {
@@ -94,9 +93,7 @@ nav ul li {
   scroll-behavior: auto;
   max-width: 500%;
   height: 100%;
-  padding: 0,0,0,20px;
-  
-  
+  padding: 0, 0, 0, 20px;
 }
 
 .live-scores {
@@ -107,12 +104,12 @@ nav ul li {
 
 .a {
   color: #d5d5d5;
-
-
 }
 
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+input[type="text"],
+select,
+textarea {
   width: 700px;
   padding: 12px;
   border: 1px solid #ccc;
@@ -128,7 +125,7 @@ label {
 }
 
 /* Style the submit button */
-input[type=submit] {
+input[type="submit"] {
   background-color: #051026;
   color: white;
   padding: 50px 20px 50px 50px;
@@ -138,7 +135,6 @@ input[type=submit] {
   align-self: center;
   align-content: center;
   align-items: center;
-  
 }
 
 /* Style the container */
@@ -180,18 +176,19 @@ input[type=submit] {
 }
 
 .submit {
-  justify-content: center
+  justify-content: center;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
     width: 100%;
     margin-top: 0;
   }
 }
 
-  
 #heading {
   font-family: Times;
   font-weight: bold;
@@ -217,21 +214,19 @@ th {
 
 .Description {
   color: white;
-  background-color: #3E444C;
+  background-color: #3e444c;
   font-family: Times;
   font-weight: bold;
-  
 }
 
 .jumbotron {
-  background-image: url(http://2.bp.blogspot.com/-PTGfoujiAeU/UPml2luBlpI/AAAAAAAADsI/H7I60USFMVQ/s1600/Manchester-United-Facebook-Cover001.jpg);
+  background-image: url(http://2bp.blogspot.com/-PTGfoujiAeU/UPml2luBlpI/AAAAAAAADsI/H7I60USFMVQ/s1600/Manchester-United-Facebook-Cover001.jpg);
   background-size: 100%;
   color: black;
 }
 
 #Home {
-  background-image: linear-gradient(red,black)
-
+  background-image: linear-gradient(red, black);
 }
 /* .Footer {
   display: flex;

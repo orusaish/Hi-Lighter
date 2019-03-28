@@ -12,7 +12,8 @@
       integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="./css/style1.css">
 
     <script
       src="http://code.jquery.com/jquery-3.3.1.js"
@@ -23,98 +24,100 @@
   </head>
 
   <body>
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">Soccer Highlights</h1>
+            <p class="lead">One Place where you get all upto date information about Premier League Teams.</p>
+          </div>
+        </div>
 
     <div class="nav-wrapper">
-    <div class="sizer"></div>
-    <div class="logo">
-      <div class="sizer"></div>
-      <div class="text">SoccerHighlights.com</div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="Home.asp">Home</a></li>
-        <li><a href="Sign In.asp">Sign In</a></li>
-        <li><a href="Edit - Team Card.asp">Edit - Team Card</a></li>
-        <li><a href="Contact Us">Contact Us</a></li>
-      </ul>
-    </nav>
-    <div class="sub-nav" id="teams">
-      <div class="sizer"></div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li><a href="Manchester United".asp><b>Manchester United</b></a></li>
-        <li><a href="Manchester City".asp><b>Manchester City</b></a></li>
-        <li><a href="Liverpool".asp><b>Liverpool</b></a></li>
-        <li><a href="Arsenal".asp><b>Arsenal</b></a></li>
-        <li><a href="Barcelona".asp><b>Barcelona</b></a></li>
-        <li><a href="Real Madrid".asp><b>Real Madrid</b></a></li>
-        <li><a href="Juventus".asp><b>Juventus</b></a></li>
-        <li><a href="Bayern Munich".asp><b>Bayern Munich</b></a></li>
-      </ul>
-    </div>
-  </div>
-  
-  
+    
+        <div class="navbar">
+            <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+            <a href="./TeamCard.html"><i class="fa fa-fw fa-user"></i> Add Team</a>
+            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact us</a> 
+            
+          </div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <div class="navbar-nav mr-auto"> 
+                  <div class="nav-item active">
+                    <a class="nav-link" href="./TeamCard.html?team=Manchester United">Manchester United <span class="sr-only">(current)</span></a>
+                  </div>
+                   
+                  <div class="nav-item">
+                      <a class="nav-link" href="./TeamCard.html?team=Manchester City">Manchester City</a>
+                    </div> 
+                    <div class="nav-item">
+                        <a class="nav-link" href="./TeamCard.html?team=Liverpool">Liverpool</a>
+                      </div> 
+                      <div class="nav-item">
+                          <a class="nav-link" href="./TeamCard.html?team=Arsenal">Arsenal</a>
+                        </div> 
+                        <div class="nav-item">
+                            <a class="nav-link" href="./TeamCard.html?team=F C Barcelona">Barcelona</a>
+                          </div> 
+                          <div class="nav-item">
+                              <a class="nav-link" href="./TeamCard.html?team=Real Madrid">Real Madrid</a>
+                            </div> 
+                            <div class="nav-item">
+                                <a class="nav-link" href="./TeamCard.html?team=Juventus Football Club">Juventus</a>
+                              </div> 
+                              <div class="nav-item">
+                                  <a class="nav-link" href="./TeamCard.html?team=Bayern Munich">Bayern Munich</a>
+                                </div> 
+                  </ul> 
+  </nav>
+  <br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
   <div class="fake-content">
     
     <div class="scorebat">
-    <iframe src="https://www.scorebat.com/embed/" scrolling="yes" width="500" height="700" frameborder="5" </iframe></iframe>
+    <iframe src="https://www.scorebat.com/embed/" scrolling="yes" width="700" height="500" frameborder="5" </iframe></iframe>
     <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://www.scorebat.com/embed/embed.js?v=m2to'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'scorebat-jssdk'));</script>
     </div>
     
-  </div>  
-  
-  <div class="container">
-      <form action="/action_page.php">
-        <div class="row">
-          <div class="col-25">
-            <label for="fname">First Name</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-          </div>
+  </div> 
+</div> 
+  <div class="col-md-3">
+  <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">First Name</label>
+        <input type="text" class="form-control" id="name" placeholder="">
+      </div>
+      <div class="form-group">
+          <label for="exampleFormControlInput1">Last Name</label>
+          <input type="text" class="form-control" id="lastname" placeholder="">
         </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="lname">Last Name</label>
-          </div>
-          <div class="col-75">
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="Favourite Club">Favourite Club</label>
-          </div>
-          <div class="col-75">
-            <select id="Favourite Club" name="Favourite Club">
-              <option value="Manchester United">Manchester United</option>
-              <option value="Manchester City">Manchester City</option>
-              <option value="Liverpool">Liverpool</option>
-              <option value="Arsenal">Arsenal</option>
-              <option value="Barcelona">Barcelona</option>
-              <option value="Real Madrid">Real Madrid</option>
-              <option value="Juventus">Juventus</option>
-              <option value="Bayern Munich">Bayern Munich</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-25">
-            <label for="comments">Comments On Highlights</label>
-          </div>
-          <div class="col-75">
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          </div>
-        </div>
-        <div class="row">
-          <input type="submit" value="Submit">
-        </div>
-      </form>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Favourite Team</label>
+        <select class="form-control" id="favourite">
+          <option>1. Manchester United </option>
+          <option>2. Manchester City</option>
+          <option>3. Liverpool</option>
+          <option>4. Arsenal</option>
+          <option>5. Barcelona</option>
+          <option>6. Real Madrid</option>
+          <option>7. Juventus</option>
+          <option>8. Bayern Munich</option>
+          <option>9. Other</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Your Comments</label>
+        <textarea class="form-control" id="comments" rows="3"></textarea>
+      </div>
+    </form>
+  </div>
     </div>
-
-    <script src="/scripts/index.js"></script>
+  </div>
+    <!-- <script src="/scripts/index.js"></script> -->
+    <!-- <script type="text/javascript" src="./scripts/firebase_form.js"></script> -->
   </body>
 </html>
