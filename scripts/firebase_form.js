@@ -42,6 +42,7 @@ $(document).ready(function(event) {
       document.getElementById("owner").innerHTML = data["Owner"];
       document.getElementById("manager").innerHTML = data["Manager"];
       document.getElementById("description").innerHTML = data["Discription"];
+      document.getElementById("players").innerHTML = data["Players"];
 
       document.getElementById("teamLogo").src = data["TeamLogo"];
     },
