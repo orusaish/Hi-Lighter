@@ -1,3 +1,15 @@
+function getParameterByName(name) {
+  var url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return "";
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+var all_team_data = {};
+var team = getParameterByName("team");
+
 $(document).ready(function(event) {
   var config = {
     apiKey: "AIzaSyCQKsx_zjRAIiZ_D6UUyn7JFBYDTWIJDAE",
@@ -10,52 +22,32 @@ $(document).ready(function(event) {
   firebase.initializeApp(config);
 
   var database = firebase.database();
-  $("#Team-submit").on("click", function(event) {
-    console.log("clicked");
-    event.preventDefault();
 
-    var teamname = $("#TeamName")
-      .val()
-      .trim();
-    var logo = $("#logo")
-      .val()
-      .trim();
-    var manager = $("#manager")
-      .val()
-      .trim();
-    var owner = $("#owner")
-      .val()
-      .trim();
-    var arena = $("#arena")
-      .val()
-      .trim();
-    var location = $("#location")
-      .val()
-      .trim();
-    var players = $("#players")
-      .val()
-      .trim();
-    var discription = $("#discription")
-      .val()
-      .trim();
+  var ref = firebase.database().ref("/project");
 
-    database.ref("/project").push({
-      TeamName: teamname,
-      TeamLogo: logo,
-      Manager: manager,
-      Owner: owner,
-      Arene: arena,
-      Location: location,
-      Players: players,
-      Discription: discription
-    });
-    $("#TeamName").val("");
-    $("#logo").val("");
-    $("#manager").val("");
-    $("#owner").val("");
-    $("#arena").val("");
-    $("#location").val("");
-    $("#players").val("");
-    $("#discription").val("");
-  });
+  ref.on(
+    "value",
+    function(snapshot) {
+      console.log(snapshot.val());
+      for (var key in snapshot.val()) {
+        console.log(key);
+        var data = snapshot.val()[key];
+        all_team_data[data["TeamName"]] = data;
+      }
+      console.log(all_team_data);
+      document.getElementById("heading").innerHTML = team;
+      var data = all_team_data[team];
+      document.getElementById("stadium").innerHTML = data["Arene"];
+      document.getElementById("location").innerHTML = data["Location"];
+      document.getElementById("owner").innerHTML = data["Owner"];
+      document.getElementById("manager").innerHTML = data["Manager"];
+      document.getElementById("description").innerHTML = data["Discription"];
+      document.getElementById("players").innerHTML = data["Players"];
+
+      document.getElementById("teamLogo").src = data["TeamLogo"];
+    },
+    function(error) {
+      console.log("Error: " + error.code);
+    }
+  );
 });

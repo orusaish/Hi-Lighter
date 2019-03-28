@@ -5,20 +5,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Profile Card</title>
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/slate/bootstrap.min.css" rel="stylesheet" integrity="sha384-RpX8okQqCyUNG7PlOYNybyJXYTtGQH+7rIKiVvg1DLg6jahLEk47VvpUyS+E2/uJ" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
+  <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="jumbotron">
-        <button type="submit" class="btn btn-default" id="Home">Home</button>
-      <b><h1 class="text-center" id="heading">Manchester United</h1></b>
-      <b><h2 class="text-center" id="subHeading">Est.1878</h2></b>
-      <div class="team-image">
-      </div>
-      <p class="pull-right" id="currentTime"></p>
+        <a class="active" href="./index.html"><i class="center"></i> Home</a>
+        <!-- <button type="submit" class="btn btn-default" id="Home" href="./index.html">Home</button> -->
+      <b><h1 class="text-center" id="heading"></h1></b>
+      <div class="text-center">
+      <img class="team-image" id='teamLogo' width='150px'>
+    </img>
+  </div>
     </div>
 
  
@@ -29,75 +44,54 @@
               <h3 class="panel-title">Club Information</h3>
             </div>
             <div class="panel-body">
-              <table class="table table-hover" id="player-table">
-                <thead>
-                  <tr>
-                    <th class="text-center">Stadium Name</th>
-                    <th class="text-center">Location</th>
-                    <th class="text-center">Manager</th>
-                    <th class="text-center">Owner</th>
-                    <th class="text-center">Description</th>
-                    <th class="text-center">Remove</th>
-                  </tr>
-                </thead>
-                <tbody id="player-table-rows">
-                </tbody>
-              </table>
+                <table class="table table-hover" id="player-table">
+                    <thead>
+                        <tr>
+                        <th class="text-center" >Stadium Name:</th>
+                        <td class="text-center" id="stadium" >Loading</td>
+                        </tr>
+                        <tr>
+                        <th class="text-center">Location:</th>
+                        <td class="text-center" id="location">Loading</td>
+                        </tr>
+                        <tr>
+                        <th class="text-center">Manager:</th>
+                        <td class="text-center" id="manager">Loading</td>
+                        </tr>
+                        <tr>
+                        <th class="text-center">Owner:</th>
+                        <td class="text-center" id="owner">Loading</td>
+                        </tr>
+                        <tr>
+                        <th class="text-center">Description:</th>
+                        <td class="text-center" id="description">Loading</td>
+                        </tr>
+                        <tr>
+                        <th class="text-center">Players:</th>
+                        <td class="text-center" id="players">Loading</td>
+                        </tr>
+                    </thead>
+                  </table>
             </div>
           </div>
-        </div>
-  
-        <div class="col-xs-12 col-sm-3">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Add New Club Information</h3>
-              <div>
-                <div class="panel-body">
-                  <form>
-                    <div class="form-group">
-                      <label>Stadium Name</label>
-                      <input type="text" class="form-control form-field" id="Stadium Name">
-                    </div>
-                    <div class="form-group">
-                      <label>Location</label>
-                      <input type="text" class="form-control form-field" id="Location">
-                    </div>
-                    <div class="form-group">
-                      <label>Manager</label>
-                      <input type="text" class="form-control form-field" id="Manager">
-                    </div>
-                    <div class="form-group">
-                      <label>Owner</label>
-                      <input type="text" class="form-control form-field" id="Owner">
-                    </div>
-                    <div class="form-group">
-                      <label>Description</label>
-                      <input type="text" class="form-control form-field" id="Description">
-                    </div>
-                    <div class="form-group">
-                      <label>Players</label>
-                      <imput type="text" class="form-control form-field" id="Players">
-                    </div>
-  
-                    <button type="submit" class="btn btn-default" id="submit">Add Club Information</button>
-                    <button type="submit" class="btn btn-default" id="Youtube">Youtube</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </div> 
+      
+      <div class="col-md-3">
+        <h2>Watch Videos here</h2>
+         <button type="submit" class="btn btn-default" id="Youtube">Youtube</button> 
       </div>
-
+    </div>
   </div>
-
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script> 
   
-
-  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js" integrity="sha256-1hjUhpc44NwiNg8OwMu2QzJXhD8kcj+sJA3aCQZoUjg=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
   </script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <!-- <script type="text/javascript" src="./scripts/apis.js"></script> -->
+  <script type="text/javascript" src="./scripts/firebase_form.js"></script>
+  <script type="text/javascript"></script>
+    
+    
+  
 </body>
 
 </html>
