@@ -9,7 +9,7 @@ function getParameterByName(name) {
 }
 var all_team_data = {};
 var team = getParameterByName("team");
-console.log(team);
+
 $(document).ready(function(event) {
   var config = {
     apiKey: "AIzaSyCQKsx_zjRAIiZ_D6UUyn7JFBYDTWIJDAE",
@@ -21,57 +21,8 @@ $(document).ready(function(event) {
   };
   firebase.initializeApp(config);
 
-  // <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js" />;
-
   var database = firebase.database();
-  $("#submit").on("click", function(event) {
-    event.preventDefault();
 
-    var teamname = $("#TeamName")
-      .val()
-      .trim();
-    var logo = $("#logo")
-      .val()
-      .trim();
-    var manager = $("#manager")
-      .val()
-      .trim();
-    var owner = $("#owner")
-      .val()
-      .trim();
-    var arena = $("#arena")
-      .val()
-      .trim();
-    var location = $("#location")
-      .val()
-      .trim();
-    var players = $("#players")
-      .val()
-      .trim();
-    var discription = $("#discription")
-      .val()
-      .trim();
-
-    database.ref("/project").push({
-      TeamName: teamname,
-      TeamLogo: logo,
-      Manager: manager,
-      Owner: owner,
-      Arene: arena,
-      Location: location,
-      Players: players,
-      Discription: discription
-    });
-    console.log("clicked");
-    $("#TeamName").val("");
-    $("#logo").val("");
-    $("#manager").val("");
-    $("#owner").val("");
-    $("#arena").val("");
-    $("#location").val("");
-    $("#players").val("");
-    $("#discription").val("");
-  });
   var ref = firebase.database().ref("/project");
 
   ref.on(
