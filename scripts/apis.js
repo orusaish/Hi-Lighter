@@ -34,7 +34,13 @@ if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Ma
     var randomVid = MC[Math.floor((Math.random() * MU.length) + 1)];
 } else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Liverpool") {
     var randomVid = LP[Math.floor((Math.random() * MU.length) + 1)];
-}
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Arsenal") {
+    var randomVid = AR[Math.floor((Math.random() * MU.length) + 1)];
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=F%20C%20Barcelona") {
+    var randomVid = BR[Math.floor((Math.random() * MU.length) + 1)];
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Real%20Madrid") {
+    var randomVid = RM[Math.floor((Math.random() * MU.length) + 1)];
+};
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
