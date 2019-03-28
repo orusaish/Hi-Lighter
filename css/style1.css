@@ -2,7 +2,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .jumbotron {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP2d5YtFMIyugXoSpQPGOTZdeVQfKiTMc7Nlf5XC6D3-ai8ESXHg");
+  background-image: url("https://halfspaceshome.files.wordpress.com/2019/01/grass-football-pitch-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -28,6 +28,9 @@ container {
 
 .active {
   background-color: #4caf50;
+}
+.container {
+  background-image: ;
 }
 
 @media screen and (max-width: 500px) {
