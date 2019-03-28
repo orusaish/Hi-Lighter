@@ -1,115 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Sports Highlights</title>
 
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="./css/style1.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sports Highlights</title>
 
-    <script
-      src="http://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-  </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style1.css">
 
-  <body>
-      <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-4">Soccer Highlights</h1>
-            <p class="lead">One Place where you get all upto date information about Soccer Teams.</p>
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Soccer Highlights</h1>
+      <p class="lead">One Place where you get all upto date information about Premier League Teams.</p>
+    </div>
+  </div>
+
+  <div class="nav-wrapper">
+
+    <div class="navbar">
+
+      <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+      <a href="./teamEdit.html"><i class="fa fa-fw fa-user"></i> Add Team</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact us</a>
+
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-link" href="./TeamCard.html?team=Manchester United">Manchester United <span
+              class="sr-only">(current)</span></a>
+
+          <a class="nav-link" href="./TeamCard.html?team=Manchester City">Manchester City</a>
+
+          <a class="nav-link" href="./TeamCard.html?team=Liverpool">Liverpool</a>
+
+          <a class="nav-link" href="./TeamCard.html?team=Arsenal">Arsenal</a>
+
+          <a class="nav-link" href="./TeamCard.html?team=F C Barcelona">Barcelona</a>
+
+          <a class="nav-link" href="./TeamCard.html?team=Real Madrid">Real Madrid</a>
+
+          <a class="nav-link" href="./TeamCard.html?team=Juventus Football Club">Juventus</a>
+
+          <a class="nav-link" href="./TeamCard.html?team=Bayern Munich">Bayern Munich</a>
+
+        </div>
+      </div>
+
+    </nav>
+
+    <br><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="fake-content">
+
+            <div id="videoPlayer"></div>
+
           </div>
         </div>
+        <div class="col-md-3">
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">First Name</label>
+              <input type="text" class="form-control" id="name" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Last Name</label>
+              <input type="text" class="form-control" id="lastname" placeholder="">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Favourite Team</label>
+              <select class="form-control" id="favourite">
+                <option>1. Manchester United </option>
+                <option>2. Manchester City</option>
+                <option>3. Liverpool</option>
+                <option>4. Arsenal</option>
+                <option>5. Barcelona</option>
+                <option>6. Real Madrid</option>
+                <option>7. Juventus</option>
+                <option>8. Bayern Munich</option>
+                <option>9. Other</option>
+              </select>
+            </div>
 
-    <div class="nav-wrapper">
-    
-        <div class="navbar">
-          
-            <a class="active" href="./index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
-            <a href="./teamEdit.html"><i class="fa fa-fw fa-user"></i> Add Team</a>
-            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact us</a> 
-            
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Your Comments</label>
+              <textarea class="form-control" id="comments" rows="3"></textarea>
+            </div>
+          </form>
         </div>
-          
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                 <div class="navbar-nav mr-auto"> 
-                     <a class="nav-link" href="./TeamCard.html?team=Manchester United">Manchester United <span class="sr-only">(current)</span></a>
-                      
-                      <a class="nav-link" href="./TeamCard.html?team=Manchester City">Manchester City</a>
-                  
-                       <a class="nav-link" href="./TeamCard.html?team=Liverpool">Liverpool</a>
-                         
-                       <a class="nav-link" href="./TeamCard.html?team=Arsenal">Arsenal</a>
-                        
-                       <a class="nav-link" href="./TeamCard.html?team=F C Barcelona">Barcelona</a>
-                           
-                       <a class="nav-link" href="./TeamCard.html?team=Real Madrid">Real Madrid</a>
-                                 
-                       <a class="nav-link" href="./TeamCard.html?team=Juventus Football Club">Juventus</a>
-                                      
-                       <a class="nav-link" href="./TeamCard.html?team=Bayern Munich">Bayern Munich</a>
-                               
-                  </div>  
-               </div> 
-                        
-          </nav>
+      </div>
+    </div>
+    <script src="./scripts/apis.js"></script>
+</body>
 
-  <br><br>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-  <div class="fake-content">
-    
-    <div class="scorebat">
-    <iframe src="https://www.scorebat.com/embed/" scrolling="yes" width="700" height="500" frameborder="5" </iframe></iframe>
-    <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://www.scorebat.com/embed/embed.js?v=m2to'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'scorebat-jssdk'));</script>
-    </div>
-    
-  </div> 
-</div> 
-  <div class="col-md-3">
-  <form>
-      <div class="form-group">
-        <label for="exampleFormControlInput1">First Name</label>
-        <input type="text" class="form-control" id="name" placeholder="">
-      </div>
-      <div class="form-group">
-          <label for="exampleFormControlInput1">Last Name</label>
-          <input type="text" class="form-control" id="lastname" placeholder="">
-        </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Favourite Team</label>
-        <select class="form-control" id="favourite">
-          <option>1. Manchester United </option>
-          <option>2. Manchester City</option>
-          <option>3. Liverpool</option>
-          <option>4. Arsenal</option>
-          <option>5. Barcelona</option>
-          <option>6. Real Madrid</option>
-          <option>7. Juventus</option>
-          <option>8. Bayern Munich</option>
-          <option>9. Other</option>
-        </select>
-      </div>
-    
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Your Comments</label>
-        <textarea class="form-control" id="comments" rows="3"></textarea>
-      </div>
-    </form>
-  </div>
-    </div>
-  </div>
-  </body>
 </html>

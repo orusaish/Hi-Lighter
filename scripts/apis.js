@@ -16,15 +16,32 @@ var BR = ["7usNaYC5mXA", "GTE0jJLvBwY", "egp4dyqP1Kc", "vd11FDcG7iI"];
 var RM = ["vQzfEcOuuQM", "Tai2bv5CB0w", "XQjHGPt8C-g", "RelhCGm6hjE", "ymTWEwgjWh8"];
 var JV = ["cLfSpFg6Pxg", "PuFyOHkTrug", "_sxyXSj0jaI", "Dixu0lYfMkQ", "rzUJvN7YRi4"];
 var BY = ["ug2FZQQXO9M", "qqFxE14rGgM", "rhySsu_xOTs", "lDWgTW87W5I", "a5kriXjYnmI"];
-
+var pageURL = window.location.href;
 //have to make multiple blocks of this code for each team array
-var randomVid = BY[Math.floor((Math.random() * MU.length) + 1)];
 
-var tag = document.createElement('script');
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+$("#Youtube").on("click", function () {
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+
+if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Manchester%20United") {
+    var randomVid = MU[Math.floor((Math.random() * MU.length) + 1)];
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Manchester%20City") {
+    var randomVid = MC[Math.floor((Math.random() * MU.length) + 1)];
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Liverpool") {
+    var randomVid = LP[Math.floor((Math.random() * MU.length) + 1)];
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Arsenal") {
+    var randomVid = AR[Math.floor((Math.random() * MU.length) + 1)];
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=F%20C%20Barcelona") {
+    var randomVid = BR[Math.floor((Math.random() * MU.length) + 1)];
+} else if (pageURL === "file:///C:/Users/Owner/Desktop/Hi-Lighter/TeamCard.html?team=Real%20Madrid") {
+    var randomVid = RM[Math.floor((Math.random() * MU.length) + 1)];
+};
+
 
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
